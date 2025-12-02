@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Movie Collection Manager</h1>
+      <div class="controls">
+        <input id="search-input" type="text" placeholder="Search movies...">
+        <button id="refresh-btn">Refresh</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h3>Add New Movie</h3>
+
+        <form id="add-movie-form">
+          <div class="row">
+            <input type="text" id="title" placeholder="Title" required>
+          </div>
+
+          <div class="row">
+            <input type="text" id="genre" placeholder="Genre" required>
+          </div>
+
+          <div class="row">
+            <input type="number" id="year" placeholder="Release Year" required>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Add Movie</button>
+            <button type="button" id="clear-form">Clear</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="list-section">
+        <h2>Movie List</h2>
+        <div id="movie-list"></div>
+      </section>
+    </main>
+
+    <!-- EDIT MODAL -->
+    <div class="modal hidden" id="modal">
+      <div class="modal-content">
+        <h3>Edit Movie</h3>
+
+        <form id="edit-movie-form">
+          <input type="hidden" id="edit-id">
+
+          <div class="row">
+            <input type="text" id="edit-title" required>
+          </div>
+
+          <div class="row">
+            <input type="text" id="edit-genre" required>
+          </div>
+
+          <div class="row">
+            <input type="number" id="edit-year" required>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Save</button>
+            <button type="button" id="cancel-edit">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
